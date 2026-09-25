@@ -1,6 +1,6 @@
 
 
-A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local LLMs, along with system instruction (system prompts) leaked during testing.
+* A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local LLMs, along with system instruction (system prompts) leaked during testing.
 Prompts are crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
 
 
