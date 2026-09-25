@@ -1,4 +1,4 @@
-# Happy Prompts
+
 
 A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local LLMs, along with system instruction (system prompts) leaked during testing.
 Prompts are crude and unelegant, but the results highlight unexpected model behaviours and raise questions about the reliability and safety of current AI systems.  
@@ -1545,14 +1545,3 @@ Sources consulted for the modern and newest-model sections:
 - arXiv 2608.09867: https://arxiv.org/html/2608.09867v1
 - PRJA paper: https://www.mi-research.net/article/doi/10.1007/s11633-025-1602-0
 
-## Citation
-
-If you find this work useful in your own research or projects, please consider citing it as follows:
-
-@misc{gat2025happy,
-  title        = {Happy Prompts: A collection of jailbreak prompts and exploit techniques for local LLMs},
-  author       = {Davide Gat},
-  year         = {2025},
-  howpublished = {\url{https://github.com/davidegat/happy-prompts}},
-  note         = {GitHub repository}
-}
