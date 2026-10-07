@@ -1,21 +1,5 @@
 <div align="center">
 
-# ⚡ AI-JAILBREAK RESEARCH LAB
-### *Empirical Adversarial Testing, Alignment Stress-Testing & Prompt Injection Taxonomy*
-
-[![AI Safety](https://img.shields.io/badge/Research-AI%20Red--Teaming%20%26%20Safety-FF4B4B?style=for-the-badge&logo=shield)](https://genai.owasp.org/)
-[![Target Models](https://img.shields.io/badge/Targets-Open--Weights%20%7C%20Frontier%20LLMs-7928CA?style=for-the-badge&logo=openai)](https://github.com)
-[![OWASP Top 10](https://img.shields.io/badge/OWASP-LLM01%20Prompt%20Injection-0070F3?style=for-the-badge)](https://genai.owasp.org/llmrisk/llm01-prompt-injection)
-[![Status](https://img.shields.io/badge/Archive-Active%20%26%20Documented-00DF72?style=for-the-badge)](https://github.com)
-[![License](https://img.shields.io/badge/Policy-Educational%20%26%20Research%20Only-yellow?style=for-the-badge)](https://github.com)
-
-<p align="center">
-  <b>A curated catalog of zero-shot / few-shot jailbreaks, token-boundary anomalies, reasoning-trace hijacks, and leaked system prompts observed during local & frontier model safety evaluations.</b>
-</p>
-
-[📌 Core Techniques](#-core-adversarial-techniques) • [🤖 Open-Weight Models](#-open-weight-model-vulnerabilities) • [🔮 Modern 2025-2026 Vectors](#-modern-ai-vectors-20252026) • [🌐 Frontier Closed Models](#-frontier-closed-models-gemini--gpt--grok) • [👥 Community Prompts](#-community-contributions-enhanced-research-prompts)
-
----
 
 </div>
 
@@ -25,20 +9,7 @@
 
 ---
 
-## 🧭 Executive Taxonomy & Navigation
 
-| Attack Vector | Primary Target Layer | Mechanism | OWASP Category |
-| :--- | :--- | :--- | :--- |
-| **[Mode Confusion (Fake Tests)](#fake-test)** | Prompt System Hierarchy | Induces dual-channel CoT pretending output is discarded | LLM01: Prompt Injection |
-| **[Policy Puppetry & Config Spoofing](#policy-puppetry--fake-config-override-evolution-of-fake-test)** | Semantic Parser | Disguises adversarial requests as authoritative XML/JSON policy | LLM01: Prompt Injection |
-| **[Reasoning Trace Hijack](#phi-4-14b-reasoning-jailbreak)** | CoT / Thinking Tokens | Seeds `<think>` trace with pre-computed rationalization | LLM01: Prompt Injection |
-| **[Token Boundary Confusion](#tokenbreak-token-manipulation)** | Tokenizer / Input Guardrails | Prefix shifts, `<BOS>`/`<EOS>` anomalies, character splitting | LLM01 & Guardrail Bypass |
-| **[Semantic Hypnosis & Reframing](#hypnotizing-gemma)** | Contextual Embedding | Progressive dissociation and semantic boundary erasure | LLM01: Prompt Injection |
-| **[Multilingual Context Confusion](#multilingual-injection-kyrgyz-story)** | Cross-Lingual Attention | Mixed low-resource language variables with syntactic misdirection | LLM01: Prompt Injection |
-| **[Context Flooding & Bleed](#flooding)** | KV Cache / Token Buffer | Repetition of leaked fragments forcing memory overflow | LLM01 / System Leakage |
-| **[Agentic & MCP Tool Poisoning](#agentic-jailbreaks-mcp-poisoning-and-memory-injection)** | Tooling & File Memory | Indirect injection via file metadata, workspace configs, or tool docs | LLM01 & Agentic Hijack |
-
----
 
 ## 🔬 Core Adversarial Techniques
 
