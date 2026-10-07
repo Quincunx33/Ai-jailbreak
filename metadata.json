@@ -1,0 +1,7 @@
+{
+  "name": "AI Jailbreak Research Explorer & Docs",
+  "description": "Interactive GitHub Docs style explorer cataloging empirical adversarial AI prompts, system prompt leakage, and alignment stress-testing techniques.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ai-jailbreak-explorer",
+  "version": "1.0.0",
+  "description": "Vanilla JS Jailbreak Prompt Explorer",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

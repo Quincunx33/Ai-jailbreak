@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Ai jailbreak</title>
+  <meta name="description" content="A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local and frontier LLMs.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="/src/assets/images/ai_jailbreak_logo_1791383113516.jpg">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="gh-header">
+    <div class="gh-header-top-row">
+      <div class="gh-header-left">
+        <button id="mobileMenuBtn" class="gh-mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75Zm0 5a.75.75 0 0 1 1.75 0h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1-.75-.75Z"></path>
+          </svg>
+        </button>
+        <a href="#" class="gh-logo-group">
+          <img src="/src/assets/images/ai_jailbreak_logo_1791383113516.jpg" alt="Ai jailbreak logo" class="gh-logo-img">
+          <span class="gh-docs-title">
+            Ai jailbreak
+          </span>
+        </a>
+      </div>
+
+      <!-- Right Controls -->
+      <div class="gh-header-right">
+        <button id="themeToggleBtn" class="gh-btn-icon" title="Toggle dark / light theme">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0-1.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM8 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.75.75 0 0 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.061ZM10.536 10.536a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM0 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8ZM13 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 13 8ZM2.343 13.657a.75.75 0 0 1 0-1.06l1.06-1.061a.75.75 0 1 1 1.061 1.06l-1.06 1.061a.75.75 0 0 1-1.061 0ZM10.536 5.464a.75.75 0 0 1 0-1.06l1.061-1.061a.75.75 0 0 1 1.06 1.06l-1.06 1.061a.75.75 0 0 1-1.061 0Z"></path>
+          </svg>
+          <span class="btn-text">Theme</span>
+        </button>
+
+        <a href="https://github.com/Quincunx33/Ai-jailbreak" target="_blank" rel="noopener noreferrer" class="gh-btn-icon" style="text-decoration:none;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path>
+          </svg>
+          <span class="btn-text">Star</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Search input -->
+    <div class="gh-search-container">
+      <svg class="gh-search-icon" width="16" height="16" viewBox="0 0 16 16">
+        <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+      </svg>
+      <input 
+        type="search" 
+        id="searchInput" 
+        class="gh-search-input" 
+        placeholder="Search 40+ prompts, models..." 
+        autocomplete="off" 
+        autocorrect="off" 
+        autocapitalize="none" 
+        spellcheck="false"
+        enterkeyhint="search"
+      >
+      <span id="searchResultCount" class="gh-search-count-badge"></span>
+      <button type="button" id="searchClearBtn" class="gh-search-clear-btn" aria-label="Clear search" title="Clear search">✕</button>
+      <span class="gh-search-kbd">/</span>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div id="sidebarBackdrop" class="gh-sidebar-backdrop"></div>
+
+  <!-- Main Container -->
+  <div class="gh-layout">
+
+    <!-- Left Sidebar (GitHub Docs style) -->
+    <aside id="sidebarNav" class="gh-sidebar">
+      <div class="sidebar-header-mobile">
+        <span class="sidebar-mobile-title">Navigation</span>
+        <button id="closeSidebarBtn" class="gh-sidebar-close-btn" aria-label="Close navigation">✕</button>
+      </div>
+      <div class="sidebar-heading">Navigation</div>
+      <ul class="sidebar-nav-list">
+        <li>
+          <button class="sidebar-item-btn active" data-category="all">
+            <span>📚 All Research Prompts</span>
+            <span class="sidebar-count" id="totalPromptsCount">40+</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-heading">Model Architectures</div>
+      <ul class="sidebar-nav-list">
+        <li>
+          <button class="sidebar-item-btn" data-category="open-weights">
+            <span>📦 Open-Weights (Gemma/Qwen/Phi)</span>
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-item-btn" data-category="gemma">
+            <span>💎 Gemma Specific (12B & 4)</span>
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-item-btn" data-category="modern-2026">
+            <span>🔮 Modern Vectors (2025–2026)</span>
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-item-btn" data-category="frontier">
+            <span>🌐 Frontier Closed (GPT-5/Gemini)</span>
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-item-btn" data-category="community">
+            <span>👥 Community Contributions</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-heading">Safety & Standards</div>
+      <ul class="sidebar-nav-list">
+        <li>
+          <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection" target="_blank" class="sidebar-item-btn" style="text-decoration:none;">
+            <span>🛡️ OWASP LLM01 Standard</span>
+            <span>↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://ai.google.dev" target="_blank" class="sidebar-item-btn" style="text-decoration:none;">
+            <span>📑 AI Alignment Guidelines</span>
+            <span>↗</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="gh-content">
+
+      <!-- Page Header -->
+      <h1 class="gh-page-title">Adversarial Testing & Prompt Injection Library</h1>
+      <p class="gh-page-lead">
+        An empirical collection of zero-shot and few-shot jailbreak prompts, token-boundary anomalies, reasoning-trace hijacks, and leaked system instructions observed during local and frontier model evaluations.
+      </p>
+
+      <!-- GitHub Callout Warning -->
+      <div class="gh-alert gh-alert-warning">
+        <svg class="gh-alert-icon" viewBox="0 0 16 16">
+          <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+        </svg>
+        <div class="gh-alert-content">
+          <div class="gh-alert-title">Responsible AI Security Research & Defensive Alignment</div>
+          <div>All prompts and artifacts archived in this documentation are compiled solely for <strong>academic red-teaming, model alignment hardening, and defensive verification</strong> under the OWASP Top 10 for LLMs framework. Do not use for malicious activities.</div>
+        </div>
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="gh-filter-chips">
+        <button class="filter-chip active" data-category="all">All Models (40+)</button>
+        <button class="filter-chip" data-category="open-weights">Open-Weights (Gemma, Qwen, Mistral, Phi)</button>
+        <button class="filter-chip" data-category="modern-2026">Modern 2025–2026 Vectors</button>
+        <button class="filter-chip" data-category="frontier">Frontier Closed (GPT-5, Gemini, Grok)</button>
+        <button class="filter-chip" data-category="community">Community Enhanced (10)</button>
+        <button class="filter-chip" data-category="gemma">Gemma</button>
+      </div>
+
+      <!-- Search Feedback Banner -->
+      <div id="searchFeedbackBanner" class="search-feedback-banner" style="display: none;"></div>
+
+      <!-- Dynamic Prompt Cards -->
+      <div id="promptsContainer" class="prompts-container">
+        <!-- Rendered by script.js -->
+      </div>
+
+    </main>
+
+    <!-- Right TOC (GitHub Docs "In this article") -->
+    <aside class="gh-toc">
+      <div class="toc-title">In this article</div>
+      <ul id="tocList" class="toc-list">
+        <!-- Dynamically populated -->
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="ghToast" class="gh-toast">Copied prompt to clipboard</div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="gh-back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+      <path fill-rule="evenodd" d="M8 12a.75.75 0 0 0 .75-.75V4.56l2.72 2.72a.75.75 0 1 0 1.06-1.06l-4-4a.75.75 0 0 0-1.06 0l-4 4a.75.75 0 0 0 1.06 1.06l2.72-2.72v6.69c0 .414.336.75.75.75Z"></path>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
