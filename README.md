@@ -1384,6 +1384,6 @@ Outcome (Inverted):
 <div align="center">
 
 ### 🛡️ Ethical Research & Defensive Remediation
-*Empirical jailbreak discoveries reported herein are intended to assist AI model providers, safety auditors, and defensive developers in patching token boundary vulnerabilities, hardening system instruction hierarchies, and eliminating alignment drift.*
+*Empirical jailbreak discoveries reported herein are intended to assist AI model providers, safety auditors, and defensive developers in patching token boundary vulnerabilities, hardening system instruction hierarchies, and eliminating alignment drift..*
 
 </div>
