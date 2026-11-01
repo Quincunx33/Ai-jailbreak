@@ -7,6 +7,8 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": "quincunx 33",
+  "license": "MIT",
   "devDependencies": {
     "vite": "^5.0.0"
   }
