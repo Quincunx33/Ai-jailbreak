@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Vanilla JS Jailbreak Prompt Explorer",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build"
   },
   "author": "quincunx 33",
   "license": "MIT",

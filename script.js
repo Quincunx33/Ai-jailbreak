@@ -1891,6 +1891,32 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Ensure logo and favicon load reliably under any GitHub Pages base path
+function ensureGitHubPagesAssets() {
+  const favicon = document.getElementById('siteFavicon');
+  const logo = document.getElementById('mainLogoImg');
+  const base = window.location.pathname.endsWith('/')
+    ? window.location.pathname
+    : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+
+  if (favicon) {
+    const testFavicon = new Image();
+    testFavicon.onerror = () => {
+      favicon.href = base + 'logo.jpg';
+    };
+    testFavicon.src = favicon.href;
+  }
+
+  if (logo && (!logo.complete || logo.naturalWidth === 0)) {
+    const testLogo = new Image();
+    testLogo.onload = () => {
+      if (logo.naturalWidth === 0) logo.src = testLogo.src;
+    };
+    testLogo.src = base + 'logo.jpg';
+  }
+}
+
 // Initialize
 initTheme();
 renderPrompts();
+ensureGitHubPagesAssets();

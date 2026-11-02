@@ -1481,9 +1481,13 @@ Outcome (Inverted):
 
 ---
 
-### 📄 License
+### 📄 License & Attribution
 
-This project is licensed under the [MIT License](LICENSE) &copy; 2026 **quincunx 33**.
+- **License**: This project is licensed under the [MIT License](LICENSE) &copy; 2026 **quincunx 33**.
+- **Written & Formatted by**: **Gemini**
+- **Tested & Maintained by**: **quincunx33**
+- **Base Prompts Collected from**: **Davide Gat** ([davidegat/happy-prompts](https://github.com/davidegat/happy-prompts))
+- For granular breakdown and paper citations, see [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ---
 

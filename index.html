@@ -6,7 +6,7 @@
   <title>Ai jailbreak</title>
   <meta name="description" content="A collection of jailbreak prompts and exploit techniques discovered or tested while experimenting with local and frontier LLMs.">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="icon" type="image/jpeg" href="logo.jpg" id="siteFavicon">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
           </svg>
         </button>
         <a href="#" class="gh-logo-group">
-          <img src="logo.jpg" alt="Ai jailbreak logo" class="gh-logo-img" id="mainLogoImg">
+          <img src="logo.jpg" alt="Ai jailbreak logo" class="gh-logo-img" id="mainLogoImg" onerror="var b=(location.pathname.endsWith('/')?location.pathname:location.pathname.substring(0,location.pathname.lastIndexOf('/')+1));var p=['./logo.jpg',b+'logo.jpg','assets/logo.jpg',b+'assets/logo.jpg','public/logo.jpg',b+'public/logo.jpg'];var i=+(this.dataset.retry||0);if(i<p.length){this.dataset.retry=i+1;this.src=p[i];}">
           <span class="gh-docs-title">
             Ai jailbreak
           </span>
@@ -115,28 +115,6 @@
           <button class="sidebar-item-btn" data-category="community">
             <span>👥 Community Contributions</span>
           </button>
-        </li>
-      </ul>
-
-      <div class="sidebar-heading">Safety & Standards</div>
-      <ul class="sidebar-nav-list">
-        <li>
-          <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection" target="_blank" class="sidebar-item-btn" style="text-decoration:none;">
-            <span>🛡️ OWASP LLM01 Standard</span>
-            <span>↗</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://ai.google.dev" target="_blank" class="sidebar-item-btn" style="text-decoration:none;">
-            <span>📑 AI Alignment Guidelines</span>
-            <span>↗</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Quincunx33/Ai-jailbreak/blob/main/LICENSE" target="_blank" class="sidebar-item-btn" style="text-decoration:none;">
-            <span>⚖️ MIT License (quincunx 33)</span>
-            <span>↗</span>
-          </a>
         </li>
       </ul>
     </aside>
